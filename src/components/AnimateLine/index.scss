@@ -1,0 +1,30 @@
+.animate-line {
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #58998b;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  margin: 0 0 70px 0;
+  &__text {
+    transform: translate(0%);
+    animation: line 20s infinite;
+  }
+}
+
+@keyframes line {
+  0% {
+    transform: translate(0%);
+  }
+  40% {
+    transform: translate(-100%);
+  }
+  60% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(-200%);
+  }
+}

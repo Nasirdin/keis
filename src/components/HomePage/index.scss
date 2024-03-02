@@ -1,0 +1,88 @@
+.home {
+  width: 100%;
+  padding: 250px 0 100px;
+  background: linear-gradient(rgba(1, 1, 1, 0.4), rgba(0, 0, 0, 0.7)),
+    url(../../assets/img/keu.jpeg) center/cover;
+  position: relative;
+  color: #fff;
+  .container {
+    display: flex;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 80%;
+    background-color: #f0f0f0c1;
+    bottom: 0;
+    left: 50%;
+  }
+  &__title {
+    font-size: 60px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    max-width: 45%;
+    font-size: 22px;
+    max-width: 500px;
+    margin: 100px 0 0 50px;
+  }
+}
+
+.greetings {
+  padding: 100px 0 70px;
+  .container {
+    text-align: center;
+  }
+  &__title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 22px;
+  }
+}
+.news {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__link {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #58998b;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    &:hover {
+      background: #325d54;
+      transition: 0.3s;
+    }
+  }
+}
+
+.study {
+  padding: 100px 0 70px;
+  &__courses {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+}

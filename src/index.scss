@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #161616;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 22px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #58998b;
+    left: 0;
+    bottom: -10px;
+  }
+}
+
+.small-title {
+  font-size: 20px;
+}

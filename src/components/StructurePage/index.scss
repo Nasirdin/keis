@@ -1,0 +1,24 @@
+.structure-page {
+  padding: 70px 0;
+  &__cards {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #58998b;
+    color: #fff;
+    margin: 10px 10px;
+    height: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: #325d54;
+      transition: 0.3s;
+    }
+  }
+}
