@@ -1,0 +1,28 @@
+.structure-subpage {
+  padding: 70px 0;
+  &__title {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  &__text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__list {
+    padding-left: 20px;
+    list-style-type: decimal;
+    color: #58998b;
+  }
+  &__link {
+    font-size: 18px;
+    color: #58998b;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    &:hover {
+      color: #325d54;
+      transition: 0.3s;
+      text-decoration: underline;
+    }
+  }
+}

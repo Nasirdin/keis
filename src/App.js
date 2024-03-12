@@ -6,6 +6,12 @@ import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import AllNewsPage from "./components/AllNewsPage";
 import StructurePage from "./components/StructurePage";
+import StructureSubpage from "./components/StructureSubpage";
+import Study from "./components/Study";
+import Applicant from "./components/Applicant";
+import Docs from "./components/Docs";
+import EducationalProcess from "./components/EducationalProcess";
+import About from "./components/About";
 
 function App() {
   return (
@@ -14,9 +20,15 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/news" element={<AllNewsPage />} />
         <Route path="/structure" element={<StructurePage />} />
+        <Route path="/structure/:name" element={<StructureSubpage />} />
         <Route path="/news/:id" element={<NewsPage />} />
+        <Route path="/directions" element={<Study />} />
+        <Route path="/applicant" element={<Applicant />} />
+        <Route path="//educational-process" element={<EducationalProcess />} />
+        <Route path="/docs" element={<Docs />} />
       </Routes>
       <Footer />
     </div>

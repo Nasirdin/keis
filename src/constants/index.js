@@ -1,3 +1,435 @@
+// DOCS -----------------------------------------
+
+export const KEISDocs = [
+  {
+    id: 1,
+    name: "Устав КЭУ",
+    link: "https://drive.google.com/drive/folders/10BcRW-hIYMF-PRds3kJuJtxWT5BT4UeE",
+  },
+  {
+    id: 2,
+    name: "Стратегия КЭУ",
+    link: "https://drive.google.com/file/d/1y7KVym2JsjMNKY3WIrpJrrpWgpLaNxYk/view",
+  },
+  {
+    id: 3,
+    name: "Стратегия КЭиС",
+    link: "https://drive.google.com/file/d/1q3tPmN9UdnkLoGZn9jFUJ7_HJeKcYhjx/view",
+  },
+];
+export const OtherDocs = [
+  {
+    id: 1,
+    name: "Документы попечительского совета",
+    link: "https://drive.google.com/drive/folders/12jkWkB6E24nIWgmkK2y7meHSJW_7aBux",
+  },
+  {
+    id: 2,
+    name: "Финансовый отчет",
+    link: "https://drive.google.com/file/d/1E5w2ey7RdgeMc-nnCt2wBhPDe3gXznma/view",
+  },
+  {
+    id: 3,
+    name: "Комплексный план 2022-2023",
+    link: "https://drive.google.com/file/d/1qJOMG0PIymEqQL3Im_FDSWbg_hUigpe4/view",
+  },
+  {
+    id: 4,
+    name: "Комплексный план 2021-2022",
+    link: "https://drive.google.com/file/d/175oy2DdsgrsP14o0ZA-jVJCOJ5_kDNgU/view",
+  },
+  {
+    id: 5,
+    name: "Комплексный план 2020-2021",
+    link: "https://drive.google.com/file/d/1UdmfQkz10X4Q8OKWsOcHXAaBTunq84V1/view",
+  },
+];
+
+export const Licenses = [
+  {
+    id: 1,
+    name: "Лицензия на право ведения образовательной деятельности в сфере профессионального образования",
+    link: "https://drive.google.com/file/d/174lzREjygKA3TVn4yFvJEMj7iky_HqFy/view",
+  },
+  {
+    id: 2,
+    name: "«Банковское дело»",
+    link: "https://drive.google.com/file/d/1m8PAPL9rG5dJDqNA8hAkRYNAGGZlca_K/view",
+  },
+  {
+    id: 3,
+    name: "«Гостиничный сервис»",
+    link: "https://drive.google.com/file/d/1tkA6we4HNkydmaesdEegqiH7hSZVt61p/view",
+  },
+  {
+    id: 4,
+    name: "«Налоги и налогообложение»",
+    link: "https://drive.google.com/file/d/1xPVBZsshU8F2aPvTb5xJNAUvqZTIoRDY/view",
+  },
+  {
+    id: 5,
+    name: "«Организация обслуживание в общественном питании»",
+    link: "https://drive.google.com/file/d/1sciOJxlDJ8YZVCpASvgH-0JWzlK-oii-/view",
+  },
+  {
+    id: 6,
+    name: "«Правоведение»",
+    link: "https://drive.google.com/file/d/1XYGzl4_SAFVAGeuvLZqH2KS4hk3Xv6RU/view",
+  },
+  {
+    id: 7,
+    name: "«Прикладная информатика (по отраслям)»",
+    link: "https://drive.google.com/file/d/1cYzJDt2RkLdTv1l6wMa6ihqUepVI2gNj/view",
+  },
+  {
+    id: 8,
+    name: "«Социальный работник»",
+    link: "https://drive.google.com/file/d/1xiBeUaploXysM9Irpz4K9z6e_uLnDqL9/view",
+  },
+  {
+    id: 9,
+    name: "«Страховое дело»",
+    link: "https://drive.google.com/file/d/1G-9se9KBHq2CHoLCGfo-SroyeU6sdcCp/view",
+  },
+  {
+    id: 10,
+    name: "«Технология продукции общественного питания»",
+    link: "https://drive.google.com/file/d/1REOFA1Y3DDgg88E9oeujPDFWEn_m_a0y/view",
+  },
+  {
+    id: 11,
+    name: "«Товароведение и эскпертиза качества потребительских товаров»",
+    link: "https://drive.google.com/file/d/18q_xKnNg9V1ZItoK_O8uUUrmuJx4hEkS/view",
+  },
+  {
+    id: 12,
+    name: "«Финансы (по отраслям)»",
+    link: "https://drive.google.com/file/d/1f9nXsmJeFdyY0kqiAPr8-TNLw_6B3JJY/view",
+  },
+  {
+    id: 13,
+    name: "«Экономика и бухгалтерский учет»",
+    link: "https://drive.google.com/file/d/1f39YKNI-7Uan86K55v82MDAfbu6guFn0/view",
+  },
+  {
+    id: 14,
+    name: "Новая лицензия",
+    link: "https://drive.google.com/drive/folders/1WfaKwnr7bV9yj1p1JxRQWMQc_4PY-QbF",
+  },
+  {
+    id: 15,
+    name: "Сертификаты",
+    link: "https://drive.google.com/drive/folders/1lIhCwsSJRL4fPRvyDYWJN2fNUFg2yYl0",
+  },
+];
+export const KEISProvisions = [
+  {
+    id: 1,
+    name: "Положение о библиотеке КЭиС",
+    link: "https://drive.google.com/file/d/1aBbgHGTEfHL5DRxphMrD0AJn06KCjKqf/view",
+  },
+  {
+    id: 2,
+    name: "Положение о бланочном тестировании КЭиС",
+    link: "https://drive.google.com/file/d/10ujqNEJqTHxZsFPv4OfjYiL0-hFlb9G4/view",
+  },
+  {
+    id: 3,
+    name: "Положение о гостевых лекциях КЭиС",
+    link: "https://drive.google.com/file/d/1rx99k0ohZIbGnc4NyBcmuUSIjsK_gXeJ/view",
+  },
+  {
+    id: 4,
+    name: "Положение о документах СПО КЭиС",
+    link: "https://drive.google.com/file/d/1_rb4S4ShEr1kGddkeJzH3sZTVFcWYUuV/view",
+  },
+  {
+    id: 5,
+    name: "Положение о кураторе учебной группы КЭиС",
+    link: "https://drive.google.com/file/d/1ivJjflA8t-rnlyGrTs_RfCLsTD95pvoU/view",
+  },
+  {
+    id: 6,
+    name: "Положение о КЭиС",
+    link: "https://drive.google.com/file/d/1jMDVsByVQCfXId0NakD45eNKOhj1gvFW/view",
+  },
+  {
+    id: 7,
+    name: "Положение о летнем семестре в КЭиС",
+    link: "https://drive.google.com/file/d/1gC3JRdTbuyjLxq6X4gbMFac1XrWF8RBZ/view",
+  },
+  {
+    id: 8,
+    name: "Положение о методическом совете КЭиС",
+    link: "https://drive.google.com/file/d/1BUI8Zz1QNkhQEdIDSb8FbL7Y9O1D0QGA/view",
+  },
+  {
+    id: 9,
+    name: "Положение о модульно - рейтинговой системе обучения",
+    link: "https://drive.google.com/file/d/1-90KNZQvY24Sa15PJmtR4xHI0lFcg0V2/view",
+  },
+  {
+    id: 10,
+    name: "Положение о педагогическом совете КЭиС",
+    link: "https://drive.google.com/file/d/11IbYkSpOCF081eDqB7mXwSWKQFd96CO1/view",
+  },
+  {
+    id: 11,
+    name: "Положение о переводных и семестровых экзаменах КЭиС",
+    link: "https://drive.google.com/file/d/1ji5koFEfm5dsWIy1XxNuzznL8etalGoF/view",
+  },
+  {
+    id: 12,
+    name: "Положение о поощрении студентов КЭиС",
+    link: "https://drive.google.com/file/d/1ornj2IhPLVt21exAe4eudHJOZEW_XCI5/view",
+  },
+  {
+    id: 13,
+    name: "Положение о порядке перевода восстановления и отчисления студентов КЭиС",
+    link: "https://drive.google.com/file/d/1CLf3IltyNXR2cMmJQYd8XZbRuWtukSZ_/view",
+  },
+  {
+    id: 14,
+    name: "Положение о порядке проведения междисциплинарного итогового экзамена по специальностям спо КЭиС",
+    link: "https://drive.google.com/file/d/1prcjB6XncL1V_mGcK8O0U76s87UyTCr7/view",
+  },
+  {
+    id: 15,
+    name: "Положение о почтовом ящике",
+    link: "https://drive.google.com/file/d/1RXnytlu2RU9Ms5ylKusrDPA6QedXG2HS/view",
+  },
+  {
+    id: 16,
+    name: "Положение о практике",
+    link: "https://drive.google.com/file/d/1hZaCuDldCFfKfnuB2cqe4z6uc05R9WeB/view",
+  },
+  {
+    id: 17,
+    name: "Положение о предметно-методической комиссии",
+    link: "https://drive.google.com/file/d/1eibrjm9ED_04A9-Ggd7tCZxMqVjKyMHJ/view",
+  },
+  {
+    id: 18,
+    name: "Положение о разработке учебной программы спо КЭиС",
+    link: "https://drive.google.com/file/d/1FmABmwGC2csObkRLKsOM6z9zwlShDNwE/view",
+  },
+  {
+    id: 19,
+    name: "Положение о расписании учебных занятий КЭиС",
+    link: "https://drive.google.com/file/d/1Ubtp9PuxLL3r8fzaOMCIaEBzWvPpuxb6/view",
+  },
+  {
+    id: 20,
+    name: "Положение о реагировании на жалобы и обращения студентов КЭиС",
+    link: "https://drive.google.com/file/d/1uB-vxz6R_d99Ut2URQw-66fjxqDdHAdt/view",
+  },
+  {
+    id: 21,
+    name: "Положение о срс КЭиС",
+    link: "https://drive.google.com/file/d/1rJRDGrxFOIXTYnWM9sq_lq91fjnMQ-le/view",
+  },
+  {
+    id: 22,
+    name: "Положение об итоговой государственной аттестации выпускников КЭиС",
+    link: "https://drive.google.com/file/d/12NapMLX2SD6HlOmjIL-5lOxIYE9K7r6n/view",
+  },
+  {
+    id: 23,
+    name: "Положение об организации и порядке проведения гос.экз История КР",
+    link: "https://drive.google.com/file/d/1xEelLXjveVQZB2h1KuXJry8xYdoXKfhh/view",
+  },
+  {
+    id: 24,
+    name: "Положение об учебно-производственной мастерской КЭиС",
+    link: "https://drive.google.com/file/d/1Ig85IoQ8560ya3bX-rnfg26iPM11Tvzg/view",
+  },
+  {
+    id: 25,
+    name: "Положение по организации выполнения и защиты курсовой работы по дисциплинам спо",
+    link: "https://drive.google.com/file/d/1IfU713Uogen6GaZxjpADcMVMOIFSXFjV/view",
+  },
+  {
+    id: 26,
+    name: "Руководство по системе менеджмента качества образования",
+    link: "https://drive.google.com/file/d/18HGWBUcgTXk5J9ZEJprL2h4d0jhp2vfE/view",
+  },
+  {
+    id: 27,
+    name: "Система менеджмента качества образования",
+    link: "https://drive.google.com/file/d/15xdnrGT-3_a6EOf3spgSA2BWhiKI-rqO/view",
+  },
+];
+
+// -----------------------------------------------
+
+// Учебный процесс | График учебного процесса | Расписание занятий | Расписание экзаменов
+
+export const ModuleSchedule = [
+  {
+    id: 1,
+    date: "2020-2021",
+    halfYear: 1,
+    link: "https://drive.google.com/file/d/1bW1rX4YtF-g6qZW_xWg5JktorSEDPZw1/view",
+  },
+  {
+    id: 2,
+    date: "2020-2021",
+    halfYear: 2,
+    link: "https://drive.google.com/file/d/1_3iPXZgz43DUuF05SrVbYiou94sBOXjj/view",
+  },
+  {
+    id: 3,
+    date: "2021-2022",
+    halfYear: 1,
+    link: "https://drive.google.com/file/d/1s8ndBQEgmHBu8IYcnO3FqIiCSigt0Ul9/view",
+  },
+  {
+    id: 4,
+    date: "2021-2022",
+    halfYear: 2,
+    link: "https://drive.google.com/file/d/1Wb3_kNmPUqO-DqgJPmJfb4cMUU1byEB6/view",
+  },
+  {
+    id: 5,
+    date: "2022-2023",
+    halfYear: 1,
+    link: "https://drive.google.com/file/d/1jijhMRGre9EuiNRKHTPUKPTn0JnKzJAY/view",
+  },
+  {
+    id: 5,
+    date: "2022-2023",
+    halfYear: 2,
+    link: "https://drive.google.com/file/d/1fLYiCpzY319mgSyK1qupfXtTa1MfR-qe/view",
+  },
+];
+
+export const EducationalPlans = [
+  {
+    id: 1,
+    year: "2018-2019",
+    plans: [
+      {
+        id: 1,
+        name: "По специальности «Гостиничный сервис»",
+        link: "#",
+      },
+      {
+        id: 2,
+        name: "По специальности «Прикладная информатика»",
+        link: "#",
+      },
+      {
+        id: 3,
+        name: `По специальности «Финансы (по отраслям)»`,
+        link: "#",
+      },
+      {
+        id: 4,
+        name: "По специальности «Налоги и налогообложение»",
+        link: "#",
+      },
+      {
+        id: 5,
+        name: "По специальности «Банковское дело»",
+        link: "#",
+      },
+      {
+        id: 6,
+        name: "По специальности «Товароведение и экспертиза качества потребительских товаров»",
+        link: "#",
+      },
+      {
+        id: 7,
+        name: "По специальности «Правоведение»",
+        link: "https://drive.google.com/file/d/1wumKniLmkpjdgWzRHYespq0zmkpSl4b_/view",
+      },
+      {
+        id: 8,
+        name: 'По специальности "Туризм"',
+        link: "https://drive.google.com/file/d/1jEnpcsk-LTefyDDHvJULRXrCB5DTxRWD/view",
+      },
+      {
+        id: 10,
+        name: "По специальности «Страховое право»",
+        link: "https://drive.google.com/file/d/1kPpG2VwBuhwZ4b_AmdjtYVITrV8_47Uj/view",
+      },
+      {
+        id: 11,
+        name: "По специальности «Организация обслуживания в общественном питании»",
+        link: "https://drive.google.com/file/d/1qt6IJla_7yuOiRaYWQBfhYFBXoFPxNEn/view",
+      },
+    ],
+  },
+  {
+    id: 2,
+    year: "2022-2023",
+    plans: [
+      {
+        id: 1,
+        name: "По специальности «Правоведение»",
+        link: "https://drive.google.com/file/d/1stXMPanIBSAXkvMQ3q57c6wXtkwoZM8m/view",
+      },
+      {
+        id: 2,
+        name: "По специальности «Финансы»",
+        link: "https://drive.google.com/file/d/1aetJdWUotHJTC43-n0JQBlAratQxoTV5/view",
+      },
+      {
+        id: 3,
+        name: "По специальности «Налоги и налогообложение»",
+        link: "https://drive.google.com/file/d/1DHfUALMn9N4Y6_CzW4x_46EXBtHLvfgH/view",
+      },
+      {
+        id: 4,
+        name: "По специальности «Экономика и бух.учет»",
+        link: "https://drive.google.com/file/d/1jcmo1cpnOhaStSk6bTsRUt0x0PlHJDyu/view",
+      },
+      {
+        id: 5,
+        name: "По специальности «Банковское дело»",
+        link: "https://drive.google.com/file/d/1iP-Wx4DdVNAgBWoqEGRD0U8bD9JuUtYK/view",
+      },
+      {
+        id: 6,
+        name: "По специальности «Организация обслуживания в гостиницах и туристских комплексах»",
+        link: "https://drive.google.com/file/d/1FjgsUR8A0e4r1Eup1zG5yxHOAsH7uA7x/view",
+      },
+      {
+        id: 7,
+        name: "По специальности «Туризм»",
+        link: "https://drive.google.com/file/d/1LJlD577KXuFIXU8FCUsNWycrf0eRWv7P/view",
+      },
+      {
+        id: 8,
+        name: "По специальности «Прикладная информатика»",
+        link: "https://drive.google.com/file/d/1xC-Ao23jNwLRyOpI2KoyibUs3q6WfPBD/view",
+      },
+      {
+        id: 9,
+        name: "По специальности «Технология продукции общественного питания»",
+        link: "https://drive.google.com/file/d/1HfZeheOA2fKUzhVDwAeGQPQ8vDSoCyFh/view",
+      },
+      {
+        id: 10,
+        name: `По специальности «Менеджмент (по отраслям)»`,
+        link: "https://drive.google.com/file/d/1DxRNv44y2hyZNgN8UTtrLYVCp6y-vGrm/view",
+      },
+      {
+        id: 11,
+        name: "По специальности «Право и организация социального обеспечения»",
+        link: "https://drive.google.com/file/d/1i4CYQvxYPe0YgTpnE2G_PlRj2c4t48cA/view",
+      },
+      {
+        id: 12,
+        name: "По специальности «Социальная педагогика»",
+        link: "https://drive.google.com/file/d/1sS2ZXO-w8_KJ6I-pVeLNMLZ3_dRbX-mK/view",
+      },
+    ],
+  },
+];
+
+// -----------------------------------------------
+
 export const HeaderNavigatinLinks = [
   {
     id: 1,
@@ -16,13 +448,13 @@ export const HeaderNavigatinLinks = [
   },
   {
     id: 4,
-    name: "Образование",
-    to: "/education",
+    name: "Направления",
+    to: "/directions",
   },
   {
     id: 5,
     name: "Абитуриент",
-    to: "/Enrollee",
+    to: "/applicant",
   },
   {
     id: 6,
@@ -40,6 +472,7 @@ export const Courses = [
   {
     id: 1,
     title: "Правоведение",
+    code: "030503",
     qualification: "Юрист",
     secondary: {
       year: 1,
@@ -52,8 +485,9 @@ export const Courses = [
     form: ["Очное", "Заочное"],
   },
   {
-    id: 3,
-    title: "Правоведение",
+    id: 1,
+    title: "Организация обслуживания в гостиницах и туристических комплексах",
+    code: "030503",
     qualification: "Юрист",
     secondary: {
       year: 1,
@@ -66,8 +500,9 @@ export const Courses = [
     form: ["Очное", "Заочное"],
   },
   {
-    id: 3,
+    id: 1,
     title: "Правоведение",
+    code: "030503",
     qualification: "Юрист",
     secondary: {
       year: 1,
@@ -80,8 +515,9 @@ export const Courses = [
     form: ["Очное", "Заочное"],
   },
   {
-    id: 4,
+    id: 1,
     title: "Правоведение",
+    code: "030503",
     qualification: "Юрист",
     secondary: {
       year: 1,
@@ -94,8 +530,9 @@ export const Courses = [
     form: ["Очное", "Заочное"],
   },
   {
-    id: 5,
+    id: 1,
     title: "Правоведение",
+    code: "030503",
     qualification: "Юрист",
     secondary: {
       year: 1,
@@ -108,8 +545,9 @@ export const Courses = [
     form: ["Очное", "Заочное"],
   },
   {
-    id: 6,
+    id: 1,
     title: "Правоведение",
+    code: "030503",
     qualification: "Юрист",
     secondary: {
       year: 1,
@@ -120,6 +558,214 @@ export const Courses = [
       month: 10,
     },
     form: ["Очное", "Заочное"],
+  },
+  {
+    id: 1,
+    title: "Правоведение",
+    code: "030503",
+    qualification: "Юрист",
+    secondary: {
+      year: 1,
+      month: 10,
+    },
+    basic: {
+      year: 2,
+      month: 10,
+    },
+    form: ["Очное", "Заочное"],
+  },
+  {
+    id: 1,
+    title: "Правоведение",
+    code: "030503",
+    qualification: "Юрист",
+    secondary: {
+      year: 1,
+      month: 10,
+    },
+    basic: {
+      year: 2,
+      month: 10,
+    },
+    form: ["Очное", "Заочное"],
+  },
+  {
+    id: 1,
+    title: "Правоведение",
+    code: "030503",
+    qualification: "Юрист",
+    secondary: {
+      year: 1,
+      month: 10,
+    },
+    basic: {
+      year: 2,
+      month: 10,
+    },
+    form: ["Очное", "Заочное"],
+  },
+];
+
+export const AllCourses = [
+  {
+    direction: "030503",
+    specialty: "Правоведение",
+    qualification: "Юрист",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное, заочное",
+    typesOfProfessionalActivities: [
+      "Правоприменительная",
+      "правоохранительная",
+      "консультационная",
+      "педагогическая",
+    ],
+  },
+  {
+    direction: "080106",
+    specialty: "Финансы (по отраслям)",
+    qualification: "Финансист",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное, заочное",
+    typesOfProfessionalActivities: [
+      "Ведение финансовый организации",
+      "проведение расчетов с бюджетными и внебюджетными организациями",
+      "проведение анализа финансово – хозяйственной деятельности организации",
+      "управление оборотными активами, денежным потоком и капиталом",
+      "начисление и выплата заработной планы и ведение налогового учёта",
+    ],
+  },
+  {
+    direction: "080107",
+    specialty: "Налоги и налогообложение",
+    qualification: "Специалист по налогообложению",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное",
+    typesOfProfessionalActivities: [
+      "Взимание налогов",
+      "контроля и проверка деятельности налогоплательщика",
+      "учёт налоговый поступления, налоговый санкция и штрафов",
+    ],
+  },
+  {
+    direction: "080110",
+    specialty: "Экономика и бухгалтерский учет (по отраслям)",
+    qualification: "Бухгалтер",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное, заочное",
+    typesOfProfessionalActivities: [
+      "Учетно-аналитическая",
+      "экономическая",
+      "финансово-контрольная",
+    ],
+  },
+  {
+    direction: "080108",
+    specialty: "Банковское дело",
+    qualification: "Специалист банковского дела",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное, заочное",
+    typesOfProfessionalActivities: [
+      "Ведение и учёт операция с наличными денежными средствами в национальный и иностранный валюта",
+      "ведение учёта внутрибанковских операция",
+      "ведение расчётных и сберегательных операций, операция с иностранный валютой",
+      "анализ и учёт кредитные операция, выполнения операция с ценными бумагами",
+    ],
+  },
+  {
+    direction: "100105",
+    specialty:
+      "Организация обслуживания в гостиницах и туристических комплексах",
+    qualification: "Менеджер",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное",
+    typesOfProfessionalActivities: [
+      "Бронирование гостиничных услуг",
+      "прием, размещение и выписка гостей",
+      "организация обслуживания гостей в процессе проживания",
+      "продажи гостиничного продукта",
+    ],
+  },
+  {
+    direction: "100201",
+    specialty: "Туризм",
+    qualification: "Специалист по туризму",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное",
+    typesOfProfessionalActivities: [
+      "Предоставление турагентских услуг",
+      "предоставление услуг по сопровождению туристов",
+      "предоставление туроператорских услуг",
+    ],
+  },
+  {
+    direction: "230701",
+    specialty: "Прикладная информатика (по отраслям)",
+    qualification: "Техник",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное",
+    typesOfProfessionalActivities: [
+      "Обработка информации",
+      "наладка и обслуживание оборудования отраслевой направленности в производственных, обслуживающих, торговых организациях",
+    ],
+  },
+  {
+    direction: "260502",
+    specialty: "Технология продукции общественного питания",
+    qualification: "Техник-технолог",
+    durationFromBasicEducation: "2 года 6 месяцев",
+    durationFromSecondaryEducation: "3 года 6 месяцев",
+    formOfEducation: "Очное",
+    typesOfProfessionalActivities: [
+      "Производственно-технологическая",
+      "организационно-управленческая",
+      "контрольно-технологическая",
+    ],
+  },
+  {
+    direction: "080501",
+    specialty: "Менеджмент (по отраслям)",
+    qualification: "менеджер",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное, заочное",
+    typesOfProfessionalActivities: [
+      "Организационно – управленческая",
+      "планово- финансовая",
+      "проектно-исследовательская",
+    ],
+  },
+  {
+    direction: "030504",
+    specialty: "Право и организация социального обеспечения",
+    qualification: "юрист",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное, заочное",
+    typesOfProfessionalActivities: [
+      "Обеспечение реализации прав граждан в сфере пенсионного обеспечения и социальной защиты",
+      "организационное обеспечение деятельности учреждений социальной защиты населения",
+    ],
+  },
+  {
+    direction: "050711",
+    specialty: "Социальная педагогика",
+    qualification: "социальный педагог",
+    durationFromBasicEducation: "1 год 10 месяцев",
+    durationFromSecondaryEducation: "2 года 10 месяцев",
+    formOfEducation: "Очное",
+    typesOfProfessionalActivities: [
+      "Социально-педагогическая",
+      "диагностическая",
+      "коррекционно-развивающая и реабилитационная",
+    ],
   },
 ];
 
@@ -303,5 +949,63 @@ export const Structure = [
           "https://drive.google.com/file/d/1DlEwYYS2QulOuR2iWYTX1xhGbcHYKkU9/view",
       },
     ],
+  },
+];
+
+export const OurBenefits = [
+  {
+    id: 1,
+    title: "Программа обучения и преподавательский состав",
+    text: "В нашем колледже студенты получают фундаментальные теоретические знания и практические умения, необходимые для успешной карьеры. Свои знания и опыт студентам передают высококвалифицированные преподаватели, и опытные специалисты с производства.",
+  },
+  {
+    id: 2,
+    title: "Выпускные дипломы и карьерные перспективы",
+    text: "Успешно закончившие обучение, выпускники, получают диплом государственного образца о среднем профессиональном образовании, а вместе с ним получают широкий кругозор, профессиональные навыки, уверенность в себе.",
+  },
+  {
+    id: 3,
+    title: "Возможности продолжения обучения после колледжа",
+    text: "По окончании колледжа наши выпускники также имеют возможность продолжить обучение в высших учебных заведениях.",
+  },
+  {
+    id: 4,
+    title: "Информационная система Е-билим и автоматизация обучения",
+    text: "Автоматизацию обучения студентов обеспечивают Информационная система Е-билим.",
+  },
+  {
+    id: 5,
+    title: "Студенческая жизнь: фестивали, встречи, соревнования",
+    text: "Кроме главной задачи - учёбы, в колледже насыщенная студенческая жизнь. У нас традиционно проходят различные фестивали, ежегодные Декады Знаний, тематические встречи и вечера, соревнования, праздники, организованные самими студентами и др.",
+  },
+  {
+    id: 6,
+    title: "Творческая, спортивная и общественная деятельность студентов",
+    text: "У нас есть всё необходимое для самореализации студентов в творческой, спортивной и общественной деятельности. Ребята принимают участие в различных творческих конкурсах, спортивных соревнованиях, молодежных форумах, вебинарах.",
+  },
+  {
+    id: 7,
+    title: "Адаптация и конкурентоспособность выпускников",
+    text: "Благодаря этому, выпускники нашего колледжа являются творческими конкурентоспособными специалистами, которые могут активно и эффективно работать в постоянно меняющихся социальных и экономических условиях современного общества.",
+  },
+  {
+    id: 8,
+    title: "Условия проживания для иногородних студентов",
+    text: "Иногородние студенты колледжа обеспечиваются местом в общежитии, где созданы все необходимые условия для проживания в соответствии с санитарными нормами и правилами: благоустроенные комнаты; изолятор; кухня, оборудованная электрическими плитами, мойкой с горячей и холодной водой, холодильником, стиральным автоматом, мультиваркой, микроволновкой; имеются отдельные санузлы и душевая комната.",
+  },
+  {
+    id: 9,
+    title: "Организация жизни в общежитии: воспитатели и контроль",
+    text: "В общежитии работает воспитатель и действует контрольно–пропускной режим.",
+  },
+  {
+    id: 10,
+    title: "Безопасность на территории колледжа",
+    text: "Для обеспечения безопасности студентов, преподавателей и сотрудников в колледже: ведется видеонаблюдение; установлена пожарная сигнализация.",
+  },
+  {
+    id: 11,
+    title: "Процесс поступления: критерии и сроки",
+    text: "Поступление в колледж проводится  по результатам среднего балла аттестата о среднем образовании (11 кл.) или свидетельства об основном общем образовании (9 кл.). Прием документов начинается с 12 июля 2023 г.",
   },
 ];

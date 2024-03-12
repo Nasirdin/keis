@@ -1,13 +1,12 @@
 import React from "react";
 // ---- Style ---- //
 import "./index.scss";
-import { Courses } from "../../constants";
-import Card from "../Card";
 import NewsCard from "../NewsCard";
 import AnimateLine from "../AnimateLine";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import Study from "../Study";
 
 // ---- Components ---- //
 
@@ -70,18 +69,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="study">
-        <div className="container">
-          <h2 className="study__title title">
-            КЭиС осушествляет подготовку по следующим напралениям:
-          </h2>
-          <div className="study__courses">
-            {Courses.map((course, indx) => (
-              <Card course={course} indx={indx} />
-            ))}
-          </div>
-        </div>
-      </div>
+      <Study />
     </div>
   );
 };

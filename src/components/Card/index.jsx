@@ -33,7 +33,7 @@ const Card = ({ course, indx }) => {
           <li>
             <p className="card__text">
               {course.form.map((form, inx) => (
-                <span key={inx}>{form}</span>
+                <span key={inx}>{form}, </span>
               ))}
             </p>
           </li>

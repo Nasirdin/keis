@@ -35,9 +35,9 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          {/* <div className="nav__burger burger">
+          <div className="nav__burger burger">
             <div className="burger__item"></div>
-          </div> */}
+          </div>
         </nav>
       </div>
     </header>

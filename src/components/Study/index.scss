@@ -1,0 +1,13 @@
+.study {
+  padding: 70px 0;
+  &__courses {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  &__second-title {
+    text-align: center;
+  }
+}

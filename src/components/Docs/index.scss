@@ -1,0 +1,32 @@
+.docs {
+  padding: 70px 0;
+  &__block {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  &__items,
+  .docs-table {
+    border-left: 3px solid #58998b;
+    padding-left: 20px;
+  }
+  &__item,
+  .docs-table__item {
+    color: #58998b;
+    font-size: 22px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    &:hover {
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+  }
+  &__title {
+    margin-top: 70px;
+  }
+  .docs-table__item {
+    &:nth-child(odd) {
+      background-color: #e6fffb;
+    }
+  }
+}

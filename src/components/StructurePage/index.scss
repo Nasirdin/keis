@@ -1,7 +1,6 @@
 .structure-page {
   padding: 70px 0;
   &__cards {
-    list-style-type: none;
     display: grid;
     grid-template-columns: repeat(4, 25%);
   }
@@ -16,9 +15,15 @@
     height: 150px;
     cursor: pointer;
     transition: 0.3s;
+    position: relative;
     &:hover {
       background-color: #325d54;
       transition: 0.3s;
     }
+  }
+  &__card-link {
+    position: absolute;
+    width: 100%;
+    height: 100px;
   }
 }
