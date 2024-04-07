@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 // ---- Style ---- //
 import "./index.scss";
 import { Link, useLocation } from "react-router-dom";
@@ -21,7 +21,7 @@ const NewsPage = () => {
 
   useEffect(() => {
     dispatch(getNewsById({ id: newsId }));
-  }, [currentURL]);
+  }, [currentURL, dispatch, newsId]);
 
   return !currentNews ? (
     "Loading"
@@ -55,7 +55,7 @@ const NewsPage = () => {
           <h2 className="news-page__latest-news-title title">
             Последние новости
           </h2>
-          <div>
+          <div className="news-page__cards">
             {copyNewsList
               .reverse()
               .slice(copyNewsList.length - 8)

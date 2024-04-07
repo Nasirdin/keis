@@ -30,3 +30,11 @@
     }
   }
 }
+
+@media (max-width: 724px) {
+  .docs {
+    &__block {
+      flex-direction: column-reverse;
+    }
+  }
+}

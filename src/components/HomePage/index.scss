@@ -75,7 +75,93 @@
   }
 }
 
-
 @media (max-width: 1300px) {
-  
+}
+
+@media (max-width: 1024px) {
+  .home {
+    padding: 150px 0 50px;
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__title {
+      font-size: 40px;
+      width: 100%;
+      text-align: center;
+    }
+    &__text {
+      max-width: 100%;
+      margin: 50px 0 0;
+      text-align: center;
+    }
+    &::after {
+      width: 80%;
+      height: 1px;
+      left: 10%;
+    }
+  }
+
+  .news {
+    &__cards {
+      grid-template-columns: repeat(2, 50%);
+      margin-bottom: 0;
+    }
+    .news-card {
+      margin-bottom: 30px;
+    }
+    &__link {
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .home {
+    padding: 150px 0 50px; /* Adjust padding for smaller screens */
+    .container {
+      flex-direction: column; /* Change flex direction for smaller screens */
+      align-items: center; /* Center align items */
+    }
+    &__title {
+      font-size: 40px; /* Reduce font size for smaller screens */
+      width: 100%; /* Adjust width for smaller screens */
+      text-align: center; /* Center align text */
+    }
+    &__text {
+      max-width: 100%; /* Adjust max-width for smaller screens */
+      margin: 50px 0 0; /* Adjust margin for smaller screens */
+      text-align: center; /* Center align text */
+    }
+    &::after {
+      width: 80%; /* Adjust width of the separator for smaller screens */
+      height: 1px; /* Adjust height of the separator for smaller screens */
+      left: 10%; /* Adjust position of the separator for smaller screens */
+    }
+  }
+
+  .greetings {
+    padding: 50px 0; /* Adjust padding for smaller screens */
+    .container {
+      text-align: center; /* Center align text */
+    }
+    &__title {
+      font-size: 24px; /* Reduce font size for smaller screens */
+      margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+    &__text {
+      font-size: 18px; /* Reduce font size for smaller screens */
+    }
+  }
+
+  .news {
+    &__cards {
+      grid-template-columns: repeat(
+        1,
+        100%
+      ); /* Change grid columns for smaller screens */
+    }
+    &__link {
+      font-size: 16px; /* Adjust font size of the links for smaller screens */
+    }
+  }
 }

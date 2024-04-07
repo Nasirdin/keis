@@ -69,6 +69,24 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="news">
+        <div className="container">
+          <h2 className="news__title title">Объявления</h2>
+          <div className="news__cards">
+            {copyNewsList
+              .reverse()
+              .slice(copyNewsList.length - 4)
+              .map((news, indx) => (
+                <NewsCard news={news} indx={indx} />
+              ))}
+          </div>
+          <Link className="news__link" to="/news">
+            Все объявления
+            <FaArrowRight />
+          </Link>
+        </div>
+      </div>
+
       <Study />
     </div>
   );

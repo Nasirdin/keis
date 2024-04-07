@@ -10,4 +10,38 @@
   &__title {
     margin-bottom: 30px;
   }
+  .news-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .all-news-page {
+    &__cards {
+      grid-template-columns: repeat(3, 33.33%);
+    }
+    .news-card {
+      &__img-block {
+        height: auto;
+      }
+    }
+  }
+}
+@media (max-width: 728px) {
+  .all-news-page {
+    &__cards {
+      grid-template-columns: repeat(2, 50%);
+    }
+  }
+}
+@media (max-width: 450px) {
+  .all-news-page {
+    &__cards {
+      grid-template-columns: repeat(1, 100%);
+    }
+    .news-card {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
 }

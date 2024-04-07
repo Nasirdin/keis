@@ -10,7 +10,13 @@ const NewsCard = ({ news, indx }) => {
   return (
     <div className="news-card" key={indx}>
       <div className="news-card__img-block">
-        <img className="news-card__img" src={news.img} alt={news.title} />
+        {/* {news.img && news.img.path && ( */}
+        <img
+          className="news-card__img"
+          src="https://www.keu.kg/uploads/news/i4nNLPuy7ZeES3D6o7zHup6LHv6qZ76V.jpg"
+          alt={news.title}
+        />
+        {/* )} */}
       </div>
       <div className="news-card__content">
         <p className="news-card__date">{news.date}</p>
@@ -22,7 +28,7 @@ const NewsCard = ({ news, indx }) => {
         </p>
       </div>
 
-      <Link className="news-card__link" to={`/news/` + news.id}></Link>
+      <Link className="news-card__link" to={`/news/${news.id}`} />
     </div>
   );
 };

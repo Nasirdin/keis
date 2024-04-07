@@ -11,6 +11,7 @@
     gap: 15px;
   }
   &__logo {
+    border-radius: 50%;
     width: 70px;
   }
   &__logo-text {
@@ -68,6 +69,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: 0.3s;
+    display: none;
+    cursor: pointer;
     &::before,
     &::after {
       content: "";
@@ -78,9 +82,11 @@
       height: 2px;
     }
     &::before {
+      transition: 0.3s;
       top: 0px;
     }
     &::after {
+      transition: 0.3s;
       top: 20px;
     }
     &__item {
@@ -89,10 +95,29 @@
       border-radius: 2px;
       background-color: #fff;
       position: absolute;
+      transition: 0.3s;
       top: 10px;
     }
-    &.active{
-      
+  }
+  .burger.active {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    &::before {
+      transform: rotate(-45deg);
+      top: 10px;
+      left: 0;
+      transition: 0.3s;
+    }
+    &::after {
+      transform: rotate(45deg);
+      top: 10px;
+      transition: 0.3s;
+      left: 0;
+    }
+    .burger__item {
+      transition: 0.3s;
+      display: none;
     }
   }
   &.active {
@@ -103,6 +128,13 @@
     .header__logo-text,
     .nav__link {
       color: #161616;
+    }
+    .burger {
+      &__item,
+      &::before,
+      &::after {
+        background-color: #161616;
+      }
     }
   }
 }
@@ -124,26 +156,45 @@
 }
 @media (max-width: 1024px) {
   .header {
+    .burger {
+      display: block;
+    }
     .nav {
       &__links {
         flex-direction: column;
         background-color: #000000de;
         padding: 70px 30px 30px 30px;
         width: 300px;
-        // display: none;
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
         text-align: center;
         gap: 20px;
+        &.active {
+          display: flex;
+        }
       }
     }
     &.active {
-      &.active {
-        .nav__link {
-          color: #fff;
+      .nav__link {
+        color: #fff;
+      }
+      .burger.active {
+        &__item,
+        &::before,
+        &::after {
+          background-color: #fff;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .header {
+    &__logo-text {
+      display: none;
     }
   }
 }

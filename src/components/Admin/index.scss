@@ -1,0 +1,47 @@
+.admin {
+  padding: 70px 0;
+  min-height: 100vh;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav {
+    border-right: 2px solid #58998b;
+    padding-right: 30px;
+  }
+  &__item {
+    margin-bottom: 10px;
+  }
+  &__link {
+    color: #58998b;
+    font-size: 18px;
+    &:hover {
+      color: #325d54;
+      border-bottom: 1px solid #325d54;
+    }
+  }
+  &__content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 728px) {
+  .admin {
+    padding-top: 30px;
+    .container {
+      flex-direction: column;
+    }
+    &__nav {
+      border-right: none;
+      border-bottom: 2px solid #58998b;
+      padding-right: 0;
+      margin-bottom: 30px;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+    &__content {
+      width: 100%;
+    }
+  }
+}

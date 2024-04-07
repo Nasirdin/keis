@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // ---- Style ---- //
 import "./index.scss";
-import { EducationalPlans, ModuleSchedule } from "../../constants";
-import { Link } from "react-router-dom";
+import { APILINK, EducationalPlans } from "../../constants";
+import axios from "axios";
 
 // ---- Components ---- //
 
@@ -11,11 +11,45 @@ const EducationalProcess = () => {
   const [modalTitle, setModalTitle] = useState("");
   const [plans, setPlans] = useState([]);
 
+  const [allModuleSchedule, setAllModuleSchedule] = useState(null);
+  const [allExamSchedule, setAllExamSchedule] = useState(null);
+  const [allLessSchedule, setAllLessSchedule] = useState(null);
+
   const planHandler = (e, plans) => {
     setPlans(plans);
     setActiveModal(true);
     setModalTitle(e.target.innerText);
   };
+
+  const getModuleSchedule = async () => {
+    try {
+      const response = await axios.get(`${APILINK}/module-schedule`);
+      setAllModuleSchedule(response.data.reverse());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const getExamSchedule = async () => {
+    try {
+      const response = await axios.get(`${APILINK}/exam-schedule`);
+      setAllExamSchedule(response.data.reverse());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const getLessSchedule = async () => {
+    try {
+      const response = await axios.get(`${APILINK}/less-schedule`);
+      setAllLessSchedule(response.data.reverse());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getModuleSchedule();
+    getExamSchedule();
+    getLessSchedule();
+  }, []);
 
   const ModalWindow = ({ array, title }) => {
     return (
@@ -30,7 +64,7 @@ const EducationalProcess = () => {
           ></span>
           <h3 className="modalWindow__title">{title}</h3>
           <ul className="modalWindow__items">
-            {array.map((item, indx) => (
+            {array.reverse().map((item, indx) => (
               <li className="modalWindow__item" key={indx}>
                 <a
                   className="modalWindow__link"
@@ -38,9 +72,7 @@ const EducationalProcess = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {!item.name
-                    ? `${item.halfYear}-е полугодие ${item.date} учебного года`
-                    : item.name}
+                  {item.name}
                 </a>
               </li>
             ))}
@@ -55,11 +87,21 @@ const EducationalProcess = () => {
       <div className="container">
         <h2 className="educational-process__title title">Учебный процесс</h2>
         <ul className="educational-process__items">
-          <li className="educational-process__item">Расписание занятий</li>
-          <li className="educational-process__item">Расписание экзаменов</li>
           <li
             className="educational-process__item"
-            onClick={(e) => planHandler(e, ModuleSchedule)}
+            onClick={(e) => planHandler(e, allLessSchedule)}
+          >
+            Расписание занятий
+          </li>
+          <li
+            className="educational-process__item"
+            onClick={(e) => planHandler(e, allExamSchedule)}
+          >
+            Расписание экзаменов
+          </li>
+          <li
+            className="educational-process__item"
+            onClick={(e) => planHandler(e, allModuleSchedule)}
           >
             График модулей
           </li>

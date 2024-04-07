@@ -1,0 +1,91 @@
+.admin-forms {
+  .title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__form {
+    width: 95%;
+  }
+
+  .admin-forms__form label {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .admin-forms__input,
+  .admin-forms__textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .admin-forms__textarea {
+    height: 150px; /* Высота поля ввода текста новости */
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #58998b;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #325d54;
+    }
+  }
+}
+
+.admin-items {
+  padding: 70px 0;
+  max-width: 95%;
+
+  &__item {
+    padding: 0 10px;
+    &:nth-child(odd) {
+      background-color: #d8fff9;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 5% 60% 70px 60px;
+    padding: 10px;
+    gap: 15px;
+  }
+  button {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+@media (max-width: 728px) {
+  .admin-forms {
+    &__form {
+      width: 100%;
+    }
+  }
+  .admin-items {
+    max-width: 100%;
+    &__items {
+      grid-template-columns: 10% 50% 15% 15%;
+    }
+  }
+}
+// @media (max-width: 928px) {
+//   .admin-items {
+//     &__items {
+//       // grid-template-columns: 10% 60% 10% 10%;
+//     }
+//   }
+// }

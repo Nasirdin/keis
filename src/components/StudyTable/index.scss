@@ -1,11 +1,13 @@
 .study-table {
-  width: max-content;
+  .tabeel {
+    border-bottom: 1px solid #000;
+  }
+  width: 880px;
   margin: 30px auto 70px;
   &__col {
     display: grid;
     grid-template-columns: 80px 550px 150px 50px;
     align-items: center;
-    border-bottom: 1px solid #000;
     padding: 10px 20px;
     gap: 10px;
   }
@@ -29,5 +31,62 @@
     align-items: center;
     justify-content: center;
     font-size: 22px;
+    cursor: pointer;
+  }
+  &__secondCol {
+    padding: 20px 20px;
+    background-color: #fbfbfb;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+    position: relative;
+    &::before {
+      height: 85%;
+      width: 2px;
+      content: "";
+      background-color: #58998b;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+    li {
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__secondCol.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 940px) {
+  .study-table {
+    width: 100%;
+    &__content,
+    &__head {
+      grid-template-columns: 10% 60% 20% 10%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .study-table {
+    &__content,
+    &__head {
+      grid-template-columns: 50px 60% 70px 10px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .study-table {
+    .form {
+      display: none;
+    }
+    &__content,
+    &__head {
+      grid-template-columns: 50px 70% 10px;
+    }
   }
 }

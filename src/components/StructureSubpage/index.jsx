@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // ---- Style ---- //
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPMKById } from "../../store/Slices/structureSlice";
 import "./index.scss";
@@ -15,19 +15,22 @@ const StructureSubpage = () => {
 
   useEffect(() => {
     dispatch(getPMKById({ id: pmkId }));
-  }, [currentURL]);
+  }, [currentURL, dispatch, pmkId]);
 
   const filterComposition = (role) => {
-    return currentPMK[0].composition.map((composition) => {
+    return currentPMK[0].composition.map((composition, indx) => {
       if (composition.position === role) {
         return (
-          <li className="structure-subpage__item">
+          <li className="structure-subpage__item" key={indx}>
             <a
               className="structure-subpage__link"
               target="_blank"
+              rel="noreferrer"
               href={composition.resume}
             >
-              {composition.fullName}
+              {role === "chairman"
+                ? `Председатель ПМК: ${composition.fullName}`
+                : composition.fullName}
             </a>
           </li>
         );
@@ -42,7 +45,7 @@ const StructureSubpage = () => {
       <div className="container">
         <h2 className="structure-subpage__title title">{currentPMK[0].name}</h2>
         <p className="structure-subpage__text">{currentPMK[0].text}</p>
-        <h3 className="structure-subpage__title small-title">Состав ПМК:</h3>
+        <h4 className="structure-subpage__title small-title">Состав ПМК:</h4>
         <ul className="structure-subpage__list">
           {filterComposition("chairman")}
         </ul>

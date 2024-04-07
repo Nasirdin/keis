@@ -1,15 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
-// export const getBlogList = createAsyncThunk(
-//   "blogs/getBlogList",
-//   async function (_, { rejectWithValue }) {
-//     try {
-//       const response = await axios.get(`${url}/api/blogs/`);
-//       return [response.data];
-//     } catch (error) {
-//       return rejectWithValue(error);
-//     }
-//   }
-// );
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+export const AddNews = createAsyncThunk(
+  "blogs/getBlogList",
+  async function ({newData}, { rejectWithValue }) {
+    try {
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
 
 const initialState = {
   newsList: [
@@ -206,9 +204,6 @@ const newsSlice = createSlice({
   name: "news",
   initialState,
   reducers: {
-    addNews(state, action) {
-      state.newsList = [...state.newsList, action.payload.blog];
-    },
     getNewsList(state, action) {},
     getNewsById(state, action) {
       state.newsById = state.newsList.filter((newsObject) => {
@@ -216,20 +211,6 @@ const newsSlice = createSlice({
       });
     },
   },
-  // extraReducers: (builder) => {
-  //   builder
-  //     .addCase(getBlogList.pending, (state) => {
-  //       state.status = "pending";
-  //     })
-  //     .addCase(getBlogList.fulfilled, (state, action) => {
-  //       state.blogList = [...state.blogList, action.payload];
-  //       state.status = "succeeded";
-  //     })
-  //     .addCase(getBlogList.rejected, (state, action) => {
-  //       state.status = "failed";
-  //       state.error = action.error.message;
-  //     });
-  // },
 });
 
 export const { addNews, getNewsList, getNewsById } = newsSlice.actions;

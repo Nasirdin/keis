@@ -25,3 +25,30 @@
     }
   }
 }
+
+@media (max-width: 928px) {
+  .about {
+    .title {
+      &:first-child {
+        text-align: center;
+        display: block;
+        width: max-content;
+        margin: 0 auto 50px;
+      }
+    }
+    &__box {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    .title {
+      &:first-child {
+        text-align: start;
+        width: auto;
+      }
+    }
+  }
+}
