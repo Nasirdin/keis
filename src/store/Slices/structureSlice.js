@@ -538,7 +538,247 @@ const initialState = {
           id: 1,
           fullName: "Грамоты и сертификаты ППС",
           position: "teacher",
-          resume: "https://drive.google.com/file/d/1D1i0w9-t1axo8m0t3vdXVIlctdxLUVLU/view",
+          resume:
+            "https://drive.google.com/file/d/1D1i0w9-t1axo8m0t3vdXVIlctdxLUVLU/view",
+        },
+      ],
+    },
+    {
+      id: 8,
+      name: "Лицей",
+      text: "",
+      to: "lyceum",
+      composition: [
+        {
+          id: 1,
+          fullName: "Узбекова Гульнара Ашырбековна",
+          postName: "Директор лицея",
+          position: "chairman",
+          resume:
+            "https://drive.google.com/file/d/1FDYKgvTrTfd7elLHLeZI7mPDI96-Gppm/view",
+        },
+        {
+          id: 2,
+          fullName: "Джолдошалиева Зульфия Наримановна",
+          postName: "Зам.директора по ВР",
+          resume: "#",
+          position: "chairman",
+        },
+        {
+          id: 3,
+          fullName: "Кутанова Бактыгуль Алыбековна",
+          postName: "Зам.директора по УР",
+          resume: "#",
+          position: "chairman",
+        },
+        {
+          id: 4,
+          fullName: "Бактыбекова Бегайым Бактыбековна",
+          postName: "Зав. уч. частью",
+          resume: "#",
+          position: "chairman",
+        },
+        {
+          id: 5,
+          fullName: "Ааламбек кызы Чолпонай",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1vzV_8plB5dTgehDhiHtiX1IMeZ9rqFEm/view",
+          position: "teacher",
+        },
+        {
+          id: 6,
+          fullName: "Абдразакова Нуржамал Мадалиевна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1JlJoj7sYxdhIB3H9SAcgw6oL2_g2lHHA/view",
+          position: "teacher",
+        },
+        {
+          id: 7,
+          fullName: "Абдыбекова Калбубу Мамыровна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/172GJyndQyfianhy2lssnK_U8mo2H0HLy/view",
+          position: "teacher",
+        },
+        {
+          id: 8,
+          fullName: "Абдырахманова Айжамал Абдырахмановна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1NpVvpc7TvHIWwp1t0-ovmE-dsYOkioB-/view",
+          position: "teacher",
+        },
+        {
+          id: 9,
+          fullName: "Акматбекова Мактым Бектеналиевна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/13IrPctp6nrqbhWb1N5YlJ0vhjv8dmiBB/view",
+          position: "teacher",
+        },
+        {
+          id: 10,
+          fullName: "Ахмеджанова Зайнаб Шавкатовна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1lQAm466R273pNvUmpqfEv0x__Sne68js/view",
+          position: "teacher",
+        },
+        {
+          id: 11,
+          fullName: "Ахметова Салтанат Эсеркеповна",
+          postName: "",
+          resume: "#",
+          position: "teacher",
+        },
+        {
+          id: 12,
+          fullName: "Байсалиев Эдилбек Капарович",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/15qqkDsiLJJ-KMF8TdCgHWc32L6rh3SyA/view",
+          position: "teacher",
+        },
+        {
+          id: 13,
+          fullName: "Бальджикова Инна Валентиновна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1Jky0zst2lC3YbroQq9RIi_mKZ4pH2J9Y/view",
+          position: "teacher",
+        },
+        {
+          id: 14,
+          fullName: "Боколова Салтанат Денизбековна",
+          postName: "",
+          resume: "#",
+          position: "teacher",
+        },
+        {
+          id: 15,
+          fullName: "Борубаев Азизбек Асанбекович",
+          postName: "",
+          resume: "#",
+          position: "teacher",
+        },
+        {
+          id: 16,
+          fullName: "Горшков Валерий Александрович",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1dRHUqRX_alKYnSKGhkjvasc4oCuszykh/view",
+          position: "teacher",
+        },
+        {
+          id: 17,
+          fullName: "Казиева Сейил Мырзабековна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1PdAy_iGYpp54prHC_dBHp6_Yzzn7XnVk/view",
+          position: "teacher",
+        },
+        {
+          id: 18,
+          fullName: "Касымалиева Гульнара Абдыкадыровна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1SU4OLOLCArTfXZF22N7VRrEReBG3OQCl/view",
+          position: "teacher",
+        },
+        {
+          id: 19,
+          fullName: "Кенжебаева Гульнур Акматалиевна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1GqL8oHnYAPt3jLG_88T4-UWcqCgoai7u/view",
+          position: "teacher",
+        },
+        {
+          id: 20,
+          fullName: "Кубанычбекова Зуаида Соотбековна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1Vf0yZ0gOMCtUoEwCCt4gS_4_RKQB70jf/view",
+          position: "teacher",
+        },
+        {
+          id: 21,
+          fullName: "Машарипов Азирет Уларбекович",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1UOiWT0UjNsbiINMQQbvNXPUI9iWMW2Ni/view",
+          position: "teacher",
+        },
+        {
+          id: 22,
+          fullName: "Мурзабаева Динар Асанбековна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1UA6RtpUzAgZDUApZagI3K9OLbMvlWxzA/view",
+          position: "teacher",
+        },
+        {
+          id: 23,
+          fullName: "Назарбаева Керез Турдуманбетовна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1YWwtvU6MoPZLPIHtAnn0c_Yvs-FhH19O/view",
+          position: "teacher",
+        },
+        {
+          id: 24,
+          fullName: "Нурмамбетова Венера Нуркалиевна",
+          postName: "",
+          resume: "#",
+          position: "teacher",
+        },
+        {
+          id: 25,
+          fullName: "Орозбекова Назгуль Орозбековна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1md2L-V_qB1Z9fxz613hGRKAO6mZXa9u1/view",
+          position: "teacher",
+        },
+        {
+          id: 26,
+          fullName: "Осмоналиева Гульнура Шайлообековна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1JZvPNCqCWYQX1-0aMjeH9aDVvRbZJy6C/view",
+          position: "teacher",
+        },
+        {
+          id: 27,
+          fullName: "Оторбаева Гульнур Дуюшенбиевна",
+          postName: "",
+          resume: "#",
+          position: "teacher",
+        },
+        {
+          id: 28,
+          fullName: "Сагынбекова Айданек Уланбековна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1D_AKg9gcCDe90yr9i4mxsTdzBgRqbrtI/view",
+          position: "teacher",
+        },
+        {
+          id: 29,
+          fullName: "Сагындыкова Айчурок Абдыманаповна",
+          postName: "",
+          resume: "#",
+          position: "teacher",
+        },
+        {
+          id: 30,
+          fullName: "Шакирова Марина Алековна",
+          postName: "",
+          resume:
+            "https://drive.google.com/file/d/1UAZd6hQy_LS5m6SclGfGtf46K01QxSbO/view",
+          position: "teacher",
         },
       ],
     },

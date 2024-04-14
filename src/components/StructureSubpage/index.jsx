@@ -28,7 +28,9 @@ const StructureSubpage = () => {
               rel="noreferrer"
               href={composition.resume}
             >
-              {role === "chairman"
+              {pmkId === 8 && role === "chairman"
+                ? `${composition.postName}: ${composition.fullName}`
+                : role === "chairman"
                 ? `Председатель ПМК: ${composition.fullName}`
                 : composition.fullName}
             </a>
@@ -45,7 +47,9 @@ const StructureSubpage = () => {
       <div className="container">
         <h2 className="structure-subpage__title title">{currentPMK[0].name}</h2>
         <p className="structure-subpage__text">{currentPMK[0].text}</p>
-        <h4 className="structure-subpage__title small-title">Состав ПМК:</h4>
+        <h4 className="structure-subpage__title small-title">
+          {pmkId === 8 ? "Администрация:" : "Состав ПМК"}
+        </h4>
         <ul className="structure-subpage__list">
           {filterComposition("chairman")}
         </ul>

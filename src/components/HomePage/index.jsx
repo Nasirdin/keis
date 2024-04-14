@@ -1,31 +1,97 @@
-import React from "react";
-// ---- Style ---- //
-import "./index.scss";
-import NewsCard from "../NewsCard";
-import AnimateLine from "../AnimateLine";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import YouTube from "react-youtube";
+import "./index.scss";
+import NewsCard from "../NewsCard";
+import AnimateLine from "../AnimateLine";
 import Study from "../Study";
-
-// ---- Components ---- //
+import { APILINK } from "../../constants";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+import Slide1 from "../../assets/img/slide-1.jpeg";
+import Slide2 from "../../assets/img/slide-2.jpeg";
+import Slide3 from "../../assets/img/slide-3.jpeg";
 
 const Home = () => {
   const newsList = useSelector((state) => state.newsSlice.newsList);
   const copyNewsList = [...newsList];
+  const [videoLinks, setVideoLinks] = useState([]);
+
+  const getVideo = async () => {
+    try {
+      const response = await axios.get(`${APILINK}/video`);
+      const links = response.data.map((video) => {
+        const videoId = extractVideoId(video.link);
+        return videoId;
+      });
+      setVideoLinks(links);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const extractVideoId = (videoLink) => {
+    const url = new URL(videoLink);
+    const searchParams = new URLSearchParams(url.search);
+    return searchParams.get("v");
+  };
+
+  const opts = {
+    height: "180",
+    width: "300",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  useEffect(() => {
+    getVideo();
+  }, []);
 
   return (
     <div className="homePage">
       <div className="home">
         <div className="container">
-          <h2 className="home__title">О Колледже</h2>
-          <p className="home__text">
+          <div className="home__images">
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              modules={[Autoplay]}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
+                <img className="slide-img" src={Slide1} alt="#" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className="slide-img" src={Slide2} alt="#" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className="slide-img" src={Slide3} alt="#" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <h2 className="home__title">
+            Колледж экономики и сервиса НИУ "Кыргызский экономический
+            университет им. М.Рыскулбекова"
+          </h2>
+          {/* <p className="home__text">
             Колледж экономики и сервиса является структурным подразделением НИУ
             Кыргызского экономического университета имени Мусы Рыскулбекова.
             Миссия КЭиС ‒ подготовка квалифицированных, компетентных
             специалистов, повышение их профессионализма, переход к высокому
             уровню личностного развития.
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="greetings">
@@ -33,8 +99,8 @@ const Home = () => {
           <h2 className="greetings__title">Дорогой абитуриент!</h2>
           <p className="greetings__text">
             От всей души, приветствуем вас на сайте Колледжа экономики и сервиса
-            при Научно-исследовательском университете «Кыргызский экономический
-            университет имени Мусы Рыскулбекова» (далее НИУ КЭУ). Колледж
+            Научно-исследовательского университета «Кыргызский экономический
+            университет им. Мусы Рыскулбекова» (далее НИУ КЭУ). Колледж
             экономики и сервиса является структурным подразделением НИУ КЭУ.
             Колледж реализует базовые программы среднего профессионального
             образования. Образовательная деятельность в Колледже ведется
@@ -88,6 +154,19 @@ const Home = () => {
       </div>
 
       <Study />
+
+      <div className="video">
+        <div className="container">
+          <h2 className="video__title title">Видео</h2>
+          <div className="video__content">
+            {videoLinks.slice(videoLinks.length - 4).map((link, index) => (
+              <div key={index} className="video__block">
+                <YouTube videoId={link} opts={opts} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

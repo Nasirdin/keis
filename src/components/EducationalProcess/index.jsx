@@ -109,15 +109,14 @@ const EducationalProcess = () => {
 
         <h2 className="educational-process__title title">Учебные планы</h2>
         <ul className="educational-process__items">
-          {EducationalPlans.map((plan, indx) => (
-            <li
-              key={indx}
-              className="educational-process__item"
-              onClick={(e) => planHandler(e, plan.plans)}
-            >
-              Учебные планы {plan.year} учебного года
-            </li>
-          ))}
+          {/* {EducationalPlans.filter((plan, indx) => ( */}
+          <li
+            className="educational-process__item"
+            onClick={(e) => planHandler(e, EducationalPlans[1].plans)}
+          >
+            Учебные планы
+          </li>
+          {/* ))} */}
         </ul>
       </div>
       {!activeModal ? "" : <ModalWindow array={plans} title={modalTitle} />}

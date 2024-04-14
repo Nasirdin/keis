@@ -1,264 +1,3 @@
-// DOCS -----------------------------------------
-
-// export const KEISDocs = [
-//   {
-//     id: 1,
-//     name: "Устав КЭУ",
-//     link: "https://drive.google.com/drive/folders/10BcRW-hIYMF-PRds3kJuJtxWT5BT4UeE",
-//   },
-//   {
-//     id: 2,
-//     name: "Стратегия КЭУ",
-//     link: "https://drive.google.com/file/d/1y7KVym2JsjMNKY3WIrpJrrpWgpLaNxYk/view",
-//   },
-//   {
-//     id: 3,
-//     name: "Стратегия КЭиС",
-//     link: "https://drive.google.com/file/d/1q3tPmN9UdnkLoGZn9jFUJ7_HJeKcYhjx/view",
-//   },
-// ];
-// export const OtherDocs = [
-//   {
-//     id: 1,
-//     name: "Документы попечительского совета",
-//     link: "https://drive.google.com/drive/folders/12jkWkB6E24nIWgmkK2y7meHSJW_7aBux",
-//   },
-//   {
-//     id: 2,
-//     name: "Финансовый отчет",
-//     link: "https://drive.google.com/file/d/1E5w2ey7RdgeMc-nnCt2wBhPDe3gXznma/view",
-//   },
-//   {
-//     id: 3,
-//     name: "Комплексный план 2022-2023",
-//     link: "https://drive.google.com/file/d/1qJOMG0PIymEqQL3Im_FDSWbg_hUigpe4/view",
-//   },
-//   {
-//     id: 4,
-//     name: "Комплексный план 2021-2022",
-//     link: "https://drive.google.com/file/d/175oy2DdsgrsP14o0ZA-jVJCOJ5_kDNgU/view",
-//   },
-//   {
-//     id: 5,
-//     name: "Комплексный план 2020-2021",
-//     link: "https://drive.google.com/file/d/1UdmfQkz10X4Q8OKWsOcHXAaBTunq84V1/view",
-//   },
-// ];
-
-// export const Licenses = [
-//   {
-//     id: 1,
-//     name: "Лицензия на право ведения образовательной деятельности в сфере профессионального образования",
-//     link: "https://drive.google.com/file/d/174lzREjygKA3TVn4yFvJEMj7iky_HqFy/view",
-//   },
-//   {
-//     id: 2,
-//     name: "«Банковское дело»",
-//     link: "https://drive.google.com/file/d/1m8PAPL9rG5dJDqNA8hAkRYNAGGZlca_K/view",
-//   },
-//   {
-//     id: 3,
-//     name: "«Гостиничный сервис»",
-//     link: "https://drive.google.com/file/d/1tkA6we4HNkydmaesdEegqiH7hSZVt61p/view",
-//   },
-//   {
-//     id: 4,
-//     name: "«Налоги и налогообложение»",
-//     link: "https://drive.google.com/file/d/1xPVBZsshU8F2aPvTb5xJNAUvqZTIoRDY/view",
-//   },
-//   {
-//     id: 5,
-//     name: "«Организация обслуживание в общественном питании»",
-//     link: "https://drive.google.com/file/d/1sciOJxlDJ8YZVCpASvgH-0JWzlK-oii-/view",
-//   },
-//   {
-//     id: 6,
-//     name: "«Правоведение»",
-//     link: "https://drive.google.com/file/d/1XYGzl4_SAFVAGeuvLZqH2KS4hk3Xv6RU/view",
-//   },
-//   {
-//     id: 7,
-//     name: "«Прикладная информатика (по отраслям)»",
-//     link: "https://drive.google.com/file/d/1cYzJDt2RkLdTv1l6wMa6ihqUepVI2gNj/view",
-//   },
-//   {
-//     id: 8,
-//     name: "«Социальный работник»",
-//     link: "https://drive.google.com/file/d/1xiBeUaploXysM9Irpz4K9z6e_uLnDqL9/view",
-//   },
-//   {
-//     id: 9,
-//     name: "«Страховое дело»",
-//     link: "https://drive.google.com/file/d/1G-9se9KBHq2CHoLCGfo-SroyeU6sdcCp/view",
-//   },
-//   {
-//     id: 10,
-//     name: "«Технология продукции общественного питания»",
-//     link: "https://drive.google.com/file/d/1REOFA1Y3DDgg88E9oeujPDFWEn_m_a0y/view",
-//   },
-//   {
-//     id: 11,
-//     name: "«Товароведение и эскпертиза качества потребительских товаров»",
-//     link: "https://drive.google.com/file/d/18q_xKnNg9V1ZItoK_O8uUUrmuJx4hEkS/view",
-//   },
-//   {
-//     id: 12,
-//     name: "«Финансы (по отраслям)»",
-//     link: "https://drive.google.com/file/d/1f9nXsmJeFdyY0kqiAPr8-TNLw_6B3JJY/view",
-//   },
-//   {
-//     id: 13,
-//     name: "«Экономика и бухгалтерский учет»",
-//     link: "https://drive.google.com/file/d/1f39YKNI-7Uan86K55v82MDAfbu6guFn0/view",
-//   },
-//   {
-//     id: 14,
-//     name: "Новая лицензия",
-//     link: "https://drive.google.com/drive/folders/1WfaKwnr7bV9yj1p1JxRQWMQc_4PY-QbF",
-//   },
-//   {
-//     id: 15,
-//     name: "Сертификаты",
-//     link: "https://drive.google.com/drive/folders/1lIhCwsSJRL4fPRvyDYWJN2fNUFg2yYl0",
-//   },
-// ];
-// export const KEISProvisions = [
-//   {
-//     id: 1,
-//     name: "Положение о библиотеке КЭиС",
-//     link: "https://drive.google.com/file/d/1aBbgHGTEfHL5DRxphMrD0AJn06KCjKqf/view",
-//   },
-//   {
-//     id: 2,
-//     name: "Положение о бланочном тестировании КЭиС",
-//     link: "https://drive.google.com/file/d/10ujqNEJqTHxZsFPv4OfjYiL0-hFlb9G4/view",
-//   },
-//   {
-//     id: 3,
-//     name: "Положение о гостевых лекциях КЭиС",
-//     link: "https://drive.google.com/file/d/1rx99k0ohZIbGnc4NyBcmuUSIjsK_gXeJ/view",
-//   },
-//   {
-//     id: 4,
-//     name: "Положение о документах СПО КЭиС",
-//     link: "https://drive.google.com/file/d/1_rb4S4ShEr1kGddkeJzH3sZTVFcWYUuV/view",
-//   },
-//   {
-//     id: 5,
-//     name: "Положение о кураторе учебной группы КЭиС",
-//     link: "https://drive.google.com/file/d/1ivJjflA8t-rnlyGrTs_RfCLsTD95pvoU/view",
-//   },
-//   {
-//     id: 6,
-//     name: "Положение о КЭиС",
-//     link: "https://drive.google.com/file/d/1jMDVsByVQCfXId0NakD45eNKOhj1gvFW/view",
-//   },
-//   {
-//     id: 7,
-//     name: "Положение о летнем семестре в КЭиС",
-//     link: "https://drive.google.com/file/d/1gC3JRdTbuyjLxq6X4gbMFac1XrWF8RBZ/view",
-//   },
-//   {
-//     id: 8,
-//     name: "Положение о методическом совете КЭиС",
-//     link: "https://drive.google.com/file/d/1BUI8Zz1QNkhQEdIDSb8FbL7Y9O1D0QGA/view",
-//   },
-//   {
-//     id: 9,
-//     name: "Положение о модульно - рейтинговой системе обучения",
-//     link: "https://drive.google.com/file/d/1-90KNZQvY24Sa15PJmtR4xHI0lFcg0V2/view",
-//   },
-//   {
-//     id: 10,
-//     name: "Положение о педагогическом совете КЭиС",
-//     link: "https://drive.google.com/file/d/11IbYkSpOCF081eDqB7mXwSWKQFd96CO1/view",
-//   },
-//   {
-//     id: 11,
-//     name: "Положение о переводных и семестровых экзаменах КЭиС",
-//     link: "https://drive.google.com/file/d/1ji5koFEfm5dsWIy1XxNuzznL8etalGoF/view",
-//   },
-//   {
-//     id: 12,
-//     name: "Положение о поощрении студентов КЭиС",
-//     link: "https://drive.google.com/file/d/1ornj2IhPLVt21exAe4eudHJOZEW_XCI5/view",
-//   },
-//   {
-//     id: 13,
-//     name: "Положение о порядке перевода восстановления и отчисления студентов КЭиС",
-//     link: "https://drive.google.com/file/d/1CLf3IltyNXR2cMmJQYd8XZbRuWtukSZ_/view",
-//   },
-//   {
-//     id: 14,
-//     name: "Положение о порядке проведения междисциплинарного итогового экзамена по специальностям спо КЭиС",
-//     link: "https://drive.google.com/file/d/1prcjB6XncL1V_mGcK8O0U76s87UyTCr7/view",
-//   },
-//   {
-//     id: 15,
-//     name: "Положение о почтовом ящике",
-//     link: "https://drive.google.com/file/d/1RXnytlu2RU9Ms5ylKusrDPA6QedXG2HS/view",
-//   },
-//   {
-//     id: 16,
-//     name: "Положение о практике",
-//     link: "https://drive.google.com/file/d/1hZaCuDldCFfKfnuB2cqe4z6uc05R9WeB/view",
-//   },
-//   {
-//     id: 17,
-//     name: "Положение о предметно-методической комиссии",
-//     link: "https://drive.google.com/file/d/1eibrjm9ED_04A9-Ggd7tCZxMqVjKyMHJ/view",
-//   },
-//   {
-//     id: 18,
-//     name: "Положение о разработке учебной программы спо КЭиС",
-//     link: "https://drive.google.com/file/d/1FmABmwGC2csObkRLKsOM6z9zwlShDNwE/view",
-//   },
-//   {
-//     id: 19,
-//     name: "Положение о расписании учебных занятий КЭиС",
-//     link: "https://drive.google.com/file/d/1Ubtp9PuxLL3r8fzaOMCIaEBzWvPpuxb6/view",
-//   },
-//   {
-//     id: 20,
-//     name: "Положение о реагировании на жалобы и обращения студентов КЭиС",
-//     link: "https://drive.google.com/file/d/1uB-vxz6R_d99Ut2URQw-66fjxqDdHAdt/view",
-//   },
-//   {
-//     id: 21,
-//     name: "Положение о срс КЭиС",
-//     link: "https://drive.google.com/file/d/1rJRDGrxFOIXTYnWM9sq_lq91fjnMQ-le/view",
-//   },
-//   {
-//     id: 22,
-//     name: "Положение об итоговой государственной аттестации выпускников КЭиС",
-//     link: "https://drive.google.com/file/d/12NapMLX2SD6HlOmjIL-5lOxIYE9K7r6n/view",
-//   },
-//   {
-//     id: 23,
-//     name: "Положение об организации и порядке проведения гос.экз История КР",
-//     link: "https://drive.google.com/file/d/1xEelLXjveVQZB2h1KuXJry8xYdoXKfhh/view",
-//   },
-//   {
-//     id: 24,
-//     name: "Положение об учебно-производственной мастерской КЭиС",
-//     link: "https://drive.google.com/file/d/1Ig85IoQ8560ya3bX-rnfg26iPM11Tvzg/view",
-//   },
-//   {
-//     id: 25,
-//     name: "Положение по организации выполнения и защиты курсовой работы по дисциплинам спо",
-//     link: "https://drive.google.com/file/d/1IfU713Uogen6GaZxjpADcMVMOIFSXFjV/view",
-//   },
-//   {
-//     id: 26,
-//     name: "Руководство по системе менеджмента качества образования",
-//     link: "https://drive.google.com/file/d/18HGWBUcgTXk5J9ZEJprL2h4d0jhp2vfE/view",
-//   },
-//   {
-//     id: 27,
-//     name: "Система менеджмента качества образования",
-//     link: "https://drive.google.com/file/d/15xdnrGT-3_a6EOf3spgSA2BWhiKI-rqO/view",
-//   },
-// ];
 
 // export const APILINK = "http://localhost:3000";
 export const APILINK = "https://keis-back-45ea8fbe543e.herokuapp.com";
@@ -451,7 +190,7 @@ export const HeaderNavigatinLinks = [
   },
   {
     id: 4,
-    name: "Направления",
+    name: "Специальность",
     to: "/directions",
   },
   {
@@ -1398,7 +1137,248 @@ export const Structure = [
       },
     ],
   },
+  {
+    id: 8,
+    name: "Лицей",
+    text: "",
+    to: "lyceum",
+    composition: [
+      {
+        id: 1,
+        fullName: "Узбекова Гульнара Ашырбековна",
+        postName: "Директор лицея",
+        position: "chairman",
+        resume:
+          "https://drive.google.com/file/d/1FDYKgvTrTfd7elLHLeZI7mPDI96-Gppm/view",
+      },
+      {
+        id: 2,
+        fullName: "Джолдошалиева Зульфия Наримановна",
+        postName: "Зам.директора по ВР",
+        resume: "#",
+        position: "chairman",
+      },
+      {
+        id: 3,
+        fullName: "Кутанова Бактыгуль Алыбековна",
+        postname: "Зам.директора по УР",
+        resume: "#",
+        position: "chairman",
+      },
+      {
+        id: 4,
+        fullName: "Бактыбекова Бегайым Бактыбековна",
+        postName: "Зав. уч. частью",
+        resume: "#",
+        position: "chairman",
+      },
+      {
+        id: 5,
+        fullName: "Ааламбек кызы Чолпонай",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1vzV_8plB5dTgehDhiHtiX1IMeZ9rqFEm/view",
+        position: "teacher",
+      },
+      {
+        id: 6,
+        fullName: "Абдразакова Нуржамал Мадалиевна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1JlJoj7sYxdhIB3H9SAcgw6oL2_g2lHHA/view",
+        position: "teacher",
+      },
+      {
+        id: 7,
+        fullName: "Абдыбекова Калбубу Мамыровна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/172GJyndQyfianhy2lssnK_U8mo2H0HLy/view",
+        position: "teacher",
+      },
+      {
+        id: 8,
+        fullName: "Абдырахманова Айжамал Абдырахмановна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1NpVvpc7TvHIWwp1t0-ovmE-dsYOkioB-/view",
+        position: "teacher",
+      },
+      {
+        id: 9,
+        fullName: "Акматбекова Мактым Бектеналиевна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/13IrPctp6nrqbhWb1N5YlJ0vhjv8dmiBB/view",
+        position: "teacher",
+      },
+      {
+        id: 10,
+        fullName: "Ахмеджанова Зайнаб Шавкатовна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1lQAm466R273pNvUmpqfEv0x__Sne68js/view",
+        position: "teacher",
+      },
+      {
+        id: 11,
+        fullName: "Ахметова Салтанат Эсеркеповна",
+        postName: "",
+        resume: "#",
+        position: "teacher",
+      },
+      {
+        id: 12,
+        fullName: "Байсалиев Эдилбек Капарович",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/15qqkDsiLJJ-KMF8TdCgHWc32L6rh3SyA/view",
+        position: "teacher",
+      },
+      {
+        id: 13,
+        fullName: "Бальджикова Инна Валентиновна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1Jky0zst2lC3YbroQq9RIi_mKZ4pH2J9Y/view",
+        position: "teacher",
+      },
+      {
+        id: 14,
+        fullName: "Боколова Салтанат Денизбековна",
+        postName: "",
+        resume: "#",
+        position: "teacher",
+      },
+      {
+        id: 15,
+        fullName: "Борубаев Азизбек Асанбекович",
+        postName: "",
+        resume: "#",
+        position: "teacher",
+      },
+      {
+        id: 16,
+        fullName: "Горшков Валерий Александрович",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1dRHUqRX_alKYnSKGhkjvasc4oCuszykh/view",
+        position: "teacher",
+      },
+      {
+        id: 17,
+        fullName: "Казиева Сейил Мырзабековна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1PdAy_iGYpp54prHC_dBHp6_Yzzn7XnVk/view",
+        position: "teacher",
+      },
+      {
+        id: 18,
+        fullName: "Касымалиева Гульнара Абдыкадыровна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1SU4OLOLCArTfXZF22N7VRrEReBG3OQCl/view",
+        position: "teacher",
+      },
+      {
+        id: 19,
+        fullName: "Кенжебаева Гульнур Акматалиевна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1GqL8oHnYAPt3jLG_88T4-UWcqCgoai7u/view",
+        position: "teacher",
+      },
+      {
+        id: 20,
+        fullName: "Кубанычбекова Зуаида Соотбековна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1Vf0yZ0gOMCtUoEwCCt4gS_4_RKQB70jf/view",
+        position: "teacher",
+      },
+      {
+        id: 21,
+        fullName: "Машарипов Азирет Уларбекович",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1UOiWT0UjNsbiINMQQbvNXPUI9iWMW2Ni/view",
+        position: "teacher",
+      },
+      {
+        id: 22,
+        fullName: "Мурзабаева Динар Асанбековна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1UA6RtpUzAgZDUApZagI3K9OLbMvlWxzA/view",
+        position: "teacher",
+      },
+      {
+        id: 23,
+        fullName: "Назарбаева Керез Турдуманбетовна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1YWwtvU6MoPZLPIHtAnn0c_Yvs-FhH19O/view",
+        position: "teacher",
+      },
+      {
+        id: 24,
+        fullName: "Нурмамбетова Венера Нуркалиевна",
+        postName: "",
+        resume: "#",
+        position: "teacher",
+      },
+      {
+        id: 25,
+        fullName: "Орозбекова Назгуль Орозбековна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1md2L-V_qB1Z9fxz613hGRKAO6mZXa9u1/view",
+        position: "teacher",
+      },
+      {
+        id: 26,
+        fullName: "Осмоналиева Гульнура Шайлообековна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1JZvPNCqCWYQX1-0aMjeH9aDVvRbZJy6C/view",
+        position: "teacher",
+      },
+      {
+        id: 27,
+        fullName: "Оторбаева Гульнур Дуюшенбиевна",
+        postName: "",
+        resume: "#",
+        position: "teacher",
+      },
+      {
+        id: 28,
+        fullName: "Сагынбекова Айданек Уланбековна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1D_AKg9gcCDe90yr9i4mxsTdzBgRqbrtI/view",
+        position: "teacher",
+      },
+      {
+        id: 29,
+        fullName: "Сагындыкова Айчурок Абдыманаповна",
+        postName: "",
+        resume: "#",
+        position: "teacher",
+      },
+      {
+        id: 30,
+        fullName: "Шакирова Марина Алековна",
+        postName: "",
+        resume:
+          "https://drive.google.com/file/d/1UAZd6hQy_LS5m6SclGfGtf46K01QxSbO/view",
+        position: "teacher",
+      },
+    ],
+  },
 ];
+
+export const StructureTwo = [];
 
 export const OurBenefits = [
   {
